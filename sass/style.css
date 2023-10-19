@@ -1,0 +1,139 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  height: 30px;
+}
+@media (max-width: 760px) {
+  .header {
+    box-shadow: 0px 2px 4px 0px;
+  }
+}
+
+/* Sélecteur universel (astérisque) */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+.location {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAEAEA;
+}
+.location__icon {
+  font-size: 16px;
+}
+.location__input {
+  width: 25%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  background-color: #EAEAEA;
+}
+
+body {
+  margin: 0;
+}
+
+/* Couleurs du site */
+/* Couleur ombre */
+/* Bouton gradient */
+/* Couleurs du site */
+/* Couleur ombre */
+.restaurant-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+.restaurant-search__title {
+  margin: 20px;
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+.restaurant-search__txt {
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+/* Couleurs du site */
+/* Couleur ombre */
+/* Bouton gradient */
+/* Couleurs du site */
+/* Couleur ombre */
+.button-gradient {
+  margin: 30px 0px;
+  padding: 10px 20px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
+.button-gradient__title {
+  font-weight: 700;
+}
+
+.button-filter {
+  width: 85%;
+  margin: 15px 0px;
+  padding: 0px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.32);
+  display: flex;
+  align-items: center;
+}
+.button-filter__number {
+  align-items: flex-start;
+}
+
+/* Couleurs du site */
+/* Couleur ombre */
+/* Couleurs du site */
+/* Couleur ombre */
+/* Bouton gradient */
+/* Couleurs du site */
+/* Couleur ombre */
+/* Bouton gradient */
+/* Couleurs du site */
+/* Couleur ombre */
+.restaurant-filter {
+  box-sizing: border-box;
+  margin-top: 45px;
+}
+.restaurant-filter__title {
+  margin-left: 8%;
+}
+.restaurant-filter__button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 760px) {
+  .restaurant-filter__button {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

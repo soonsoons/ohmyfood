@@ -7,51 +7,61 @@
     <title>OhMyFood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#" class="navbar">
-                <img src="images/logo/ohmyfood.png" alt="Logo OhMyFood">
-            </a>
-        </nav>
+    <!-- header -->
+    <header class="header">
+        <a href="#">
+            <img src="images/logo/ohmyfood.png" class="header__logo" alt="Logo OhMyFood">
+        </a>
     </header>
+
+    <!-- main -->
     <main>
-        <form class="localisation">
-            <div class="search-icon">
+        <!-- Localisation -->
+        <form class="location">
+            <div class="location__icon">
                 <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
             </div>
-            <input type="text" placeholder="Paris, Belleville">
+            <input type="text" class="location__input" placeholder="Paris, Belleville">
         </form>
-        <div>
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>
-                <span>Explorer nos restaurants</span>
+        <!-- Recherche de restaurant -->
+        <div class="restaurant-search">
+            <h1 class="restaurant-search__title">Réservez le menu qui vous convient</h1>
+            <p class="restaurant-search__txt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button class="button-gradient">
+                <span class="button-gradient__title">Explorer nos restaurants</span>
             </button>
         </div>
-        <div>
-            <h2>Fonctionnement</h2>
-            <button>
-                <span>1</span>
-                <i class="fa-solid fa-mobile-screen" style="color: #949494;"></i>
-                <span>Choisissez le restaurant</span>
-            </button>
-            <button>
-                <span>2</span>
-                <i class="fa-solid fa-list" style="color: #949494;"></i>
-                <span>Composez le menu</span>
-            </button>
-            <button>
-                <span>3</span>
-                <i class="fa-solid fa-store" style="color: #9356DC;"></i>
-                <span>Dégustez au restaurant</span>
-            </button>
-        </div>
-        <div>
+        <!-- Filtre de restaurant -->
+        <section class="restaurant-filter">
+            <h2 class="restaurant-filter__title">Fonctionnement</h2>
+            <div class="restaurant-filter__button">
+                <button class="button-filter">
+                    <span class="button-filter__number">1</span>
+                    <i class="fa-solid fa-mobile-screen" style="color: #949494;"></i>
+                    <span class="button-filter__title">Choisissez le restaurant</span>
+                </button>
+                <button class="button-filter">
+                    <span>2</span>
+                    <i class="fa-solid fa-list" style="color: #949494;"></i>
+                    <span>Composez le menu</span>
+                </button>
+                <button class="button-filter">
+                    <span>3</span>
+                    <i class="fa-solid fa-store" style="color: #9356DC;"></i>
+                    <span>Dégustez au restaurant</span>
+                </button>
+            </div>
+        </section>
+        <!-- Carte des restaurants -->
+        <section class="restaurant-card">
+
             <h2>Restaurants</h2>
+
             <div>
                 <article>
                     <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
@@ -82,10 +92,14 @@
                     </div>
                 </article>
             </div>
-        </div>
+
+        </section>
     </main>
+
+    <!-- footer -->
     <footer>
         <h2>ohmyfood</h2>
+
         <div>
             <div>
                 <i class="fa-solid fa-handshake-angle"></i>
