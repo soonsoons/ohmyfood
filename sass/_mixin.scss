@@ -1,6 +1,6 @@
 @import "_variable.scss";
 
 /* Bouton gradient */
-@mixin gradient {
-    background: linear-gradient(to bottom, $color-secondary, $color-primary);
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(to top, $color1, $color2);
 }
