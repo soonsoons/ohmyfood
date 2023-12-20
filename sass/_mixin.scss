@@ -1,6 +1,30 @@
 @import "_variable.scss";
 
 /* Bouton gradient */
-@mixin gradient {
-    background: linear-gradient(to bottom, $color-secondary, $color-primary);
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(to top, $color1, $color2);
+}
+
+@mixin gradient-button {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f004";
+    font: var(--fa-font-solid);
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+    animation: hearth 150ms ease-in 0s 1 normal forwards;
+    font-size: 26px;
+}
+
+@mixin gradient-label {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f004";
+    font: var(--fa-font-regular);
+    color: black;
+    font-size: 26px;
+    -webkit-text-stroke: 1px white;
 }
