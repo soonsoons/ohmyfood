@@ -55,6 +55,29 @@
     flex-direction: column;
     position: relative;
     margin: 2% 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards; /* Animation pour faire apparaître les cartes */
+
+    &:nth-child(1) {
+        animation-delay: .4s;
+    }
+    
+    &:nth-child(2) {
+        animation-delay: .7s;
+    }
+    
+    &:nth-child(3) {
+        animation-delay: .9s;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
     @media (min-width: 1080px) {
         margin: 2% 20%;
@@ -89,14 +112,14 @@
     
 
         &:hover .card-menu__check {
-            margin-right: 0;
+            margin-right: 0; /* Permet de faire apparaitre le bouton */
         }
     }
 
     &__description {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        overflow: hidden; /* Permet de cacher le texte qui dépasse */
+        text-overflow: ellipsis; /* Permet de mettre des ... à la fin du texte */
+        white-space: nowrap; /* Permet de ne pas faire de retour à la ligne */
         padding: 15px;
         width: 90%;
     }

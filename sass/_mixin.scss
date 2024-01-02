@@ -5,22 +5,34 @@
     background: linear-gradient(to top, $color1, $color2);
 }
 
-@mixin gradient-button {
-    font-family: FontAwesome;
-    display: inline-block;
-    content: "\f004";
+@mixin gradient-button { /* Bouton cliqué */
+    font-family: FontAwesome; /* Permet d'importer la police d'écriture */
+    display: inline-block; 
+    content: "\f004"; /* Permet d'importer l'icone */
     font: var(--fa-font-solid);
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); /* Le dégradé du coeur */
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px white;
-    animation: hearth 150ms ease-in 0s 1 normal forwards;
+    -webkit-background-clip: text; /* Permet de faire le dégradé sur le texte */
+    -webkit-text-fill-color: transparent; /* Permet de rendre le texte transparent */
+    -webkit-text-stroke: 1px white; /* Permet de faire le contour blanc du coeur */
+    animation: hearth 500ms ease-in 0s 1 normal forwards; /* Animation du coeur */
     font-size: 26px;
+
+    @keyframes hearth {
+        0% {
+            transform: scaleY(0);
+            transform-origin: bottom;
+        }
+    
+        100% {
+            transform: scaleY(1);
+            transform-origin: bottom;
+        }
+    }
 }
 
-@mixin gradient-label {
-    font-family: FontAwesome;
+@mixin gradient-label { /* Bouton normal */
+    font-family: FontAwesome; 
     display: inline-block;
     content: "\f004";
     font: var(--fa-font-regular);

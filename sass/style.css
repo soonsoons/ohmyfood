@@ -106,9 +106,16 @@ body {
   color: #FFFFFF;
   cursor: pointer;
   background: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.32);
 }
 .button-gradient__title {
   font-weight: 700;
+}
+.button-gradient:hover {
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.32);
+  opacity: 0.9;
+  transition: opacity 0.3s;
+  transition: box-shadow 0.3s;
 }
 
 .button-filter {
@@ -124,6 +131,10 @@ body {
   color: black;
   cursor: pointer;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.32);
+}
+.button-filter:hover {
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.32);
+  transition: box-shadow 0.3s;
 }
 .button-filter__number {
   position: absolute;
@@ -160,6 +171,7 @@ body {
 }
 
 .button-heart + label::before {
+  /* Bouton normal */
   font-family: FontAwesome;
   display: inline-block;
   content: "\f004";
@@ -170,17 +182,28 @@ body {
 }
 
 .card-container__heart .button-heart:checked + label::before {
-  font-family: FontAwesome;
+  /* Bouton cliqué */
+  font-family: FontAwesome; /* Permet d'importer la police d'écriture */
   display: inline-block;
-  content: "\f004";
+  content: "\f004"; /* Permet d'importer l'icone */
   font: var(--fa-font-solid);
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); /* Le dégradé du coeur */
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px white;
-  animation: hearth 150ms ease-in 0s 1 normal forwards;
+  -webkit-background-clip: text; /* Permet de faire le dégradé sur le texte */
+  -webkit-text-fill-color: transparent; /* Permet de rendre le texte transparent */
+  -webkit-text-stroke: 1px white; /* Permet de faire le contour blanc du coeur */
+  animation: hearth 500ms ease-in 0s 1 normal forwards; /* Animation du coeur */
   font-size: 26px;
+}
+@keyframes hearth {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
 }
 
 .card-container__heart .button-heart {
@@ -188,6 +211,7 @@ body {
 }
 
 .button-heart + label::before {
+  /* Bouton normal */
   font-family: FontAwesome;
   display: inline-block;
   content: "\f004";
@@ -198,17 +222,28 @@ body {
 }
 
 .heart .button-heart:checked + label::before {
-  font-family: FontAwesome;
+  /* Bouton cliqué */
+  font-family: FontAwesome; /* Permet d'importer la police d'écriture */
   display: inline-block;
-  content: "\f004";
+  content: "\f004"; /* Permet d'importer l'icone */
   font: var(--fa-font-solid);
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); /* Le dégradé du coeur */
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px white;
-  animation: hearth 150ms ease-in 0s 1 normal forwards;
+  -webkit-background-clip: text; /* Permet de faire le dégradé sur le texte */
+  -webkit-text-fill-color: transparent; /* Permet de rendre le texte transparent */
+  -webkit-text-stroke: 1px white; /* Permet de faire le contour blanc du coeur */
+  animation: hearth 500ms ease-in 0s 1 normal forwards; /* Animation du coeur */
   font-size: 26px;
+}
+@keyframes hearth {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
 }
 
 .heart .button-heart {
@@ -228,11 +263,14 @@ body {
   border-radius: 50px;
   color: #FFFFFF;
   cursor: pointer;
-  box-shadow: 0px 3px 10px 0px #D5D5D5;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.32);
   background: linear-gradient(to top, #9356DC, #FF79DA);
 }
 .btn-order:hover {
   box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.32);
+  opacity: 0.9;
+  transition: opacity 0.3s;
+  transition: box-shadow 0.3s;
 }
 .btn-order__title {
   font-size: 16px;
@@ -273,6 +311,10 @@ body {
 .restaurant-card {
   background-color: #f0f0f0; /* Lighten ou darken active l'intensité en pourcentage */
 }
+.restaurant-card a {
+  text-decoration: none;
+  color: black;
+}
 .restaurant-card__title {
   margin: auto;
   padding: 25px 25px;
@@ -293,6 +335,10 @@ body {
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1019607843);
   position: relative;
   width: 100%;
+}
+.card-container__article:hover {
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.32);
+  transition: box-shadow 0.3s;
 }
 .card-container__img {
   width: 100%;
@@ -485,6 +531,25 @@ body {
   flex-direction: column;
   position: relative;
   margin: 2% 0;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards; /* Animation pour faire apparaître les cartes */
+}
+.card-menu:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.card-menu:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.card-menu:nth-child(3) {
+  animation-delay: 0.9s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media (min-width: 1080px) {
   .card-menu {
@@ -516,12 +581,12 @@ body {
   cursor: pointer;
 }
 .card-menu__frame:hover .card-menu__check {
-  margin-right: 0;
+  margin-right: 0; /* Permet de faire apparaitre le bouton */
 }
 .card-menu__description {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden; /* Permet de cacher le texte qui dépasse */
+  text-overflow: ellipsis; /* Permet de mettre des ... à la fin du texte */
+  white-space: nowrap; /* Permet de ne pas faire de retour à la ligne */
   padding: 15px;
   width: 90%;
 }
@@ -580,4 +645,68 @@ hr {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.whitescreen {
+  position: fixed;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  width: 100vw;
+  background-color: #FFFFFF;
+  animation: fadeOut 4s forwards;
+  animation-delay: 0s, 2s;
+  opacity: 0.9;
+  justify-items: center;
+  align-items: center;
+}
+
+.loader {
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  border: 8px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border-color: #FF79DA rgba(0, 0, 0, 0);
+  animation: s6 0.5s infinite linear;
+  animation: s6 0.5s infinite linear, fadeOut 2s forwards;
+  animation-delay: 0s, 2s;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 4px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.loader::before {
+  border-color: #9356DC rgba(0, 0, 0, 0);
+  animation: inherit;
+  animation-duration: 0.25s;
+  animation-direction: reverse;
+}
+
+.loader::after {
+  margin: 16px;
+}
+
+@keyframes s6 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
