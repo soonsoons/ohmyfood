@@ -1,59 +1,38 @@
 .whitescreen {
-  position: fixed;
+  position: fixed; 
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: 1fr;
-  height: 100vh; /* 100% Viewport Height */
-  width: 100vw; /* 100% Viewport Width */
-  background-color: $white;
-  animation: fadeOut 4s forwards;
-  animation-delay: 0s, 2s;
-  opacity: 0.9;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh; /* 100% de la hauteur de l'écran */
+  width: 100vw; /* 100% de la largeur de l'écran */
+  background-color: $white;
+  animation: fadeOut 2s forwards; /* 2s d'animation, forwards pour garder le dernier état de l'animation */
+  animation-delay: 0s, 2s;  /* 0s de délai pour l'animation, 2s de délai pour l'animation fadeOut */
+  opacity: 0.9;
 }
 
 .loader {
-
-  z-index: 2;
-  width: 100px;
-  height: 100px;
+  position: relative;
+  z-index: 2; /* au dessus de whitescreen */
+  width: 150px;
+  height: 150px;
   display: grid;
   border:8px solid #0000;
-  border-radius: 50%;
+  border-radius: 50%; /* pour faire un cercle */
   border-color:#FF79DA #0000;
   animation: s6 0.5s infinite linear;
 
   animation: s6 0.5s infinite linear, fadeOut 2s forwards;
-  animation-delay: 0s, 2s;
-}
-
-.loader::before,
-.loader::after {    
-  content:"";
-  grid-area: 1/1;
-  margin:4px;
-  border:inherit;
-  border-radius: 50%;
-}
-
-.loader::before {
-  border-color:#9356DC #0000;
-  animation:inherit; 
-  animation-duration: 0.25s;
-  animation-direction: reverse;
-}
-
-.loader::after {
-  margin:16px;
+  animation-delay: 0s, 2s; 
 }
 
 @keyframes s6 { 
   100%{transform: rotate(1turn)}
 }
 
-@keyframes fadeOut {
+@keyframes fadeOut { /* animation de disparition pour whitescreen et loader */
   0% { opacity: 1; }
   100% { 
     opacity: 0;
