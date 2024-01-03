@@ -584,16 +584,18 @@ body {
   margin-right: 0; /* Permet de faire apparaitre le bouton */
 }
 .card-menu__description {
+  padding: 15px;
+  width: 90%;
   overflow: hidden; /* Permet de cacher le texte qui dépasse */
   text-overflow: ellipsis; /* Permet de mettre des ... à la fin du texte */
   white-space: nowrap; /* Permet de ne pas faire de retour à la ligne */
-  padding: 15px;
-  width: 90%;
 }
 .card-menu h3 {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-menu small {
   margin: 0;
@@ -653,8 +655,8 @@ hr {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  height: 100vh;
-  width: 100vw;
+  height: 100vh; /* 100% Viewport Height */
+  width: 100vw; /* 100% Viewport Width */
   background-color: #FFFFFF;
   animation: fadeOut 4s forwards;
   animation-delay: 0s, 2s;
