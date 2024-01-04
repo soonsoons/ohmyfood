@@ -312,6 +312,7 @@ body {
   background-color: #f0f0f0; /* Lighten ou darken active l'intensité en pourcentage */
 }
 .restaurant-card a {
+  display: block;
   text-decoration: none;
   color: black;
 }
@@ -329,7 +330,6 @@ body {
 }
 .card-container__article {
   margin: 0px 0px 30px 0px;
-  padding: 0px 0px 15px 0px;
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1019607843);
@@ -364,7 +364,7 @@ body {
   font-size: 15px;
 }
 .card-container__info {
-  margin: 10px;
+  padding: 15px;
 }
 .card-container__info--title {
   margin: 0;
@@ -374,8 +374,8 @@ body {
 }
 .card-container__heart {
   position: absolute;
-  bottom: 40px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   margin: 0;
   border: none;
 }
