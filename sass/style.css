@@ -170,32 +170,31 @@ body {
   }
 }
 
+/* Heart Homepage */
 .button-heart + label::before {
-  /* Bouton normal */
-  font-family: FontAwesome;
+  /* Heart normal */
   display: inline-block;
-  content: "\f004";
+  font-family: FontAwesome;
+  content: "\f004"; /* Permet d'importer l'icone */
   font: var(--fa-font-regular);
   color: black;
-  font-size: 26px;
-  -webkit-text-stroke: 1px white;
+  font-size: 26px; /* Ajuste la taille de l'icone ou du texte */
+  -webkit-text-stroke: 1px white; /* Permet de faire le contour blanc du coeur */
 }
 
 .card-container__heart .button-heart:checked + label::before {
-  /* Bouton cliqué */
+  /* Heart cliqué */
   font-family: FontAwesome; /* Permet d'importer la police d'écriture */
-  display: inline-block;
   content: "\f004"; /* Permet d'importer l'icone */
   font: var(--fa-font-solid);
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); /* Le dégradé du coeur */
-  background-clip: text;
-  -webkit-background-clip: text; /* Permet de faire le dégradé sur le texte */
-  -webkit-text-fill-color: transparent; /* Permet de rendre le texte transparent */
-  -webkit-text-stroke: 1px white; /* Permet de faire le contour blanc du coeur */
-  animation: hearth 500ms ease-in 0s 1 normal forwards; /* Animation du coeur */
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heart 500ms ease-in 0s 1 normal forwards; /* Animation du coeur */
   font-size: 26px;
 }
-@keyframes hearth {
+@keyframes heart {
   0% {
     transform: scaleY(0);
     transform-origin: bottom;
@@ -210,32 +209,31 @@ body {
   display: none;
 }
 
+/* Heart de la page de restaurant */
 .button-heart + label::before {
-  /* Bouton normal */
-  font-family: FontAwesome;
+  /* Heart normal */
   display: inline-block;
-  content: "\f004";
+  font-family: FontAwesome;
+  content: "\f004"; /* Permet d'importer l'icone */
   font: var(--fa-font-regular);
   color: black;
-  font-size: 26px;
-  -webkit-text-stroke: 1px white;
+  font-size: 26px; /* Ajuste la taille de l'icone ou du texte */
+  -webkit-text-stroke: 1px white; /* Permet de faire le contour blanc du coeur */
 }
 
 .heart .button-heart:checked + label::before {
-  /* Bouton cliqué */
+  /* Heart cliqué */
   font-family: FontAwesome; /* Permet d'importer la police d'écriture */
-  display: inline-block;
   content: "\f004"; /* Permet d'importer l'icone */
   font: var(--fa-font-solid);
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); /* Le dégradé du coeur */
-  background-clip: text;
-  -webkit-background-clip: text; /* Permet de faire le dégradé sur le texte */
-  -webkit-text-fill-color: transparent; /* Permet de rendre le texte transparent */
-  -webkit-text-stroke: 1px white; /* Permet de faire le contour blanc du coeur */
-  animation: hearth 500ms ease-in 0s 1 normal forwards; /* Animation du coeur */
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heart 500ms ease-in 0s 1 normal forwards; /* Animation du coeur */
   font-size: 26px;
 }
-@keyframes hearth {
+@keyframes heart {
   0% {
     transform: scaleY(0);
     transform-origin: bottom;
@@ -254,6 +252,7 @@ body {
   margin: 0px 20px;
 }
 
+/* Page de restaurant */
 .btn-order {
   margin: 30px 0px;
   padding: 10px 20px;
@@ -660,7 +659,6 @@ hr {
   width: 100vw; /* 100% de la largeur de l'écran */
   background-color: #FFFFFF;
   animation: fadeOut 2s forwards; /* 2s d'animation, forwards pour garder le dernier état de l'animation */
-  animation-delay: 0s, 2s; /* 0s de délai pour l'animation, 2s de délai pour l'animation fadeOut */
   opacity: 0.9;
 }
 
@@ -672,16 +670,15 @@ hr {
   display: grid;
   border: 8px solid rgba(0, 0, 0, 0);
   border-radius: 50%; /* pour faire un cercle */
-  border-color: #FF79DA rgba(0, 0, 0, 0);
+  border-color: #9356DC #FF79DA;
   animation: s6 0.5s infinite linear;
   animation: s6 0.5s infinite linear, fadeOut 2s forwards;
-  animation-delay: 0s, 2s;
 }
 
-@keyframes s6 {
+@keyframes s6 { /* animation de rotation pour loader */
   100% {
     transform: rotate(1turn);
-  }
+  } /* 360° */
 }
 @keyframes fadeOut { /* animation de disparition pour whitescreen et loader */
   0% {

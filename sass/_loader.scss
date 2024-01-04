@@ -9,7 +9,6 @@
   width: 100vw; /* 100% de la largeur de l'écran */
   background-color: $white;
   animation: fadeOut 2s forwards; /* 2s d'animation, forwards pour garder le dernier état de l'animation */
-  animation-delay: 0s, 2s;  /* 0s de délai pour l'animation, 2s de délai pour l'animation fadeOut */
   opacity: 0.9;
 }
 
@@ -21,15 +20,13 @@
   display: grid;
   border:8px solid #0000;
   border-radius: 50%; /* pour faire un cercle */
-  border-color:#FF79DA #0000;
+  border-color: $color-primary $color-secondary;
   animation: s6 0.5s infinite linear;
-
   animation: s6 0.5s infinite linear, fadeOut 2s forwards;
-  animation-delay: 0s, 2s; 
 }
 
-@keyframes s6 { 
-  100%{transform: rotate(1turn)}
+@keyframes s6 { /* animation de rotation pour loader */
+  100%{transform: rotate(1turn)} /* 360° */
 }
 
 @keyframes fadeOut { /* animation de disparition pour whitescreen et loader */

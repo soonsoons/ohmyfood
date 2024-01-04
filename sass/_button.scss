@@ -81,6 +81,7 @@
             }
 }
 
+/* Heart Homepage */
 .button-heart + label::before {
         @include gradient-label ();
 }
@@ -93,15 +94,16 @@
         display: none;
 }
 
+/* Heart de la page de restaurant */
 .button-heart + label::before {
         @include gradient-label ();
 }
 
-.heart .button-heart:checked + label::before {
+.heart .button-heart:checked + label::before { 
         @include gradient-button();
- }
+}
          
- .heart .button-heart {
+.heart .button-heart {
         display: none;
 }
 
@@ -109,6 +111,7 @@
         margin: 0px 20px;
 }
 
+/* Page de restaurant */
 .btn-order{
         margin: 30px 0px;
         padding: 10px 20px;
